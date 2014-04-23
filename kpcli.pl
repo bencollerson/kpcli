@@ -520,7 +520,7 @@ sub term_set_prompt($$) {
 
   my $app=$state->{appname};
   my $pwd=get_pwd();
-  return "$app:$pwd> ";
+  return color('yellow') . "$app:$pwd> " . color('clear');
 }
 
 # Walks through a tree of groups building a flat hash of NULL-separated
